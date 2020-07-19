@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F65AE8724C0A77800184906 /* StopWatchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65AE8624C0A77800184906 /* StopWatchButton.swift */; };
+		9F7ED55E24BF5FAE00119F03 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7ED55D24BF5FAE00119F03 /* ActivityDetailView.swift */; };
+		9F7ED56224C0736F00119F03 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7ED56124C0736F00119F03 /* StopWatch.swift */; };
 		9FCDE37C24BDEC0100DFAC72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE37B24BDEC0100DFAC72 /* AppDelegate.swift */; };
 		9FCDE37E24BDEC0100DFAC72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE37D24BDEC0100DFAC72 /* SceneDelegate.swift */; };
 		9FCDE38024BDEC0100DFAC72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE37F24BDEC0100DFAC72 /* ContentView.swift */; };
@@ -15,6 +18,12 @@
 		9FCDE38824BDEC0300DFAC72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE38624BDEC0300DFAC72 /* LaunchScreen.storyboard */; };
 		9FCDE39324BDEC0400DFAC72 /* swiftBachelorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE39224BDEC0400DFAC72 /* swiftBachelorTests.swift */; };
 		9FCDE39E24BDEC0400DFAC72 /* swiftBachelorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE39D24BDEC0400DFAC72 /* swiftBachelorUITests.swift */; };
+		9FCDE3AC24BDF91600DFAC72 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE3AB24BDF91600DFAC72 /* ActivityRow.swift */; };
+		9FCDE3AE24BDFE1300DFAC72 /* activityData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE3AD24BDFE1300DFAC72 /* activityData.json */; };
+		9FCDE3B224BE040900DFAC72 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE3B124BE040900DFAC72 /* Data.swift */; };
+		9FCDE3B424BE056A00DFAC72 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE3B324BE056A00DFAC72 /* Activity.swift */; };
+		9FCDE3B624BF2A8D00DFAC72 /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE3B524BF2A8D00DFAC72 /* ActivityListView.swift */; };
+		9FCDE3BB24BF430300DFAC72 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDE3BA24BF430300DFAC72 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F65AE8624C0A77800184906 /* StopWatchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchButton.swift; sourceTree = "<group>"; };
+		9F7ED55D24BF5FAE00119F03 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
+		9F7ED56124C0736F00119F03 /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		9FCDE37824BDEC0100DFAC72 /* swiftBachelor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftBachelor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FCDE37B24BDEC0100DFAC72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FCDE37D24BDEC0100DFAC72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +61,12 @@
 		9FCDE39924BDEC0400DFAC72 /* swiftBachelorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftBachelorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FCDE39D24BDEC0400DFAC72 /* swiftBachelorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftBachelorUITests.swift; sourceTree = "<group>"; };
 		9FCDE39F24BDEC0400DFAC72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FCDE3AB24BDF91600DFAC72 /* ActivityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRow.swift; sourceTree = "<group>"; };
+		9FCDE3AD24BDFE1300DFAC72 /* activityData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = activityData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		9FCDE3B124BE040900DFAC72 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		9FCDE3B324BE056A00DFAC72 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		9FCDE3B524BF2A8D00DFAC72 /* ActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListView.swift; sourceTree = "<group>"; };
+		9FCDE3BA24BF430300DFAC72 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +94,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F7ED55F24C0709600119F03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9FCDE3B524BF2A8D00DFAC72 /* ActivityListView.swift */,
+				9F7ED55D24BF5FAE00119F03 /* ActivityDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F7ED56024C0734400119F03 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9F7ED56124C0736F00119F03 /* StopWatch.swift */,
+				9F65AE8624C0A77800184906 /* StopWatchButton.swift */,
+				9FCDE3AB24BDF91600DFAC72 /* ActivityRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		9FCDE36F24BDEC0100DFAC72 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +136,11 @@
 		9FCDE37A24BDEC0100DFAC72 /* swiftBachelor */ = {
 			isa = PBXGroup;
 			children = (
+				9F7ED56024C0734400119F03 /* Components */,
+				9F7ED55F24C0709600119F03 /* Views */,
+				9FCDE3B924BF42EC00DFAC72 /* Manager */,
+				9FCDE3B024BE035C00DFAC72 /* Models */,
+				9FCDE3AF24BE01A100DFAC72 /* Resources */,
 				9FCDE37B24BDEC0100DFAC72 /* AppDelegate.swift */,
 				9FCDE37D24BDEC0100DFAC72 /* SceneDelegate.swift */,
 				9FCDE37F24BDEC0100DFAC72 /* ContentView.swift */,
@@ -134,6 +176,31 @@
 				9FCDE39F24BDEC0400DFAC72 /* Info.plist */,
 			);
 			path = swiftBachelorUITests;
+			sourceTree = "<group>";
+		};
+		9FCDE3AF24BE01A100DFAC72 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FCDE3AD24BDFE1300DFAC72 /* activityData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FCDE3B024BE035C00DFAC72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FCDE3B324BE056A00DFAC72 /* Activity.swift */,
+				9FCDE3B124BE040900DFAC72 /* Data.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FCDE3B924BF42EC00DFAC72 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9FCDE3BA24BF430300DFAC72 /* NetworkManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FCDE3AE24BDFE1300DFAC72 /* activityData.json in Resources */,
 				9FCDE38824BDEC0300DFAC72 /* LaunchScreen.storyboard in Resources */,
 				9FCDE38524BDEC0300DFAC72 /* Preview Assets.xcassets in Resources */,
 				9FCDE38224BDEC0300DFAC72 /* Assets.xcassets in Resources */,
@@ -267,9 +335,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FCDE3B224BE040900DFAC72 /* Data.swift in Sources */,
 				9FCDE37C24BDEC0100DFAC72 /* AppDelegate.swift in Sources */,
+				9FCDE3B624BF2A8D00DFAC72 /* ActivityListView.swift in Sources */,
+				9FCDE3AC24BDF91600DFAC72 /* ActivityRow.swift in Sources */,
+				9FCDE3BB24BF430300DFAC72 /* NetworkManager.swift in Sources */,
 				9FCDE37E24BDEC0100DFAC72 /* SceneDelegate.swift in Sources */,
 				9FCDE38024BDEC0100DFAC72 /* ContentView.swift in Sources */,
+				9F65AE8724C0A77800184906 /* StopWatchButton.swift in Sources */,
+				9F7ED56224C0736F00119F03 /* StopWatch.swift in Sources */,
+				9FCDE3B424BE056A00DFAC72 /* Activity.swift in Sources */,
+				9F7ED55E24BF5FAE00119F03 /* ActivityDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
