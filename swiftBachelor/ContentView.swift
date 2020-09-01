@@ -38,7 +38,7 @@ struct ContentView: View {
         content.sound = UNNotificationSound.default
 
         //notification trigger can be based on time, calendar or location
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 900, repeats: true)
 
         //create request to display
         let request = UNNotificationRequest(identifier: "ContentIdentifier1", content: content, trigger: trigger)
@@ -55,11 +55,6 @@ struct ContentView: View {
         NavigationView {
             
         VStack {
-            Button(action: {
-                self.networkManager.loadDataNormal();
-            }) {
-                Text("Update")
-            }
             ActivityListView()
             
             HStack {

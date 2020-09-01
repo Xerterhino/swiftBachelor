@@ -152,9 +152,9 @@ extension StopWatch {
             secondsString = "0" + secondsString
         }
         
-        if minutes < 10 {
-            minutesString = "0" + minutesString
-        }
+  //      if minutes < 10 {
+            minutesString = "0" + minutesString.dropLast()
+    //    }
         
         return "\(minutesString):\(secondsString):\(millsecondsString)"
     }

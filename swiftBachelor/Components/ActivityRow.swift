@@ -44,9 +44,9 @@ struct ActivityRow: View {
             secondsString = "0" + secondsString
         }
         
-        if minutes < 10 {
-            minutesString = "0" + minutesString
-        }
+      //  if minutes < 10 {
+        minutesString = "0" + minutesString.dropLast()
+      //  }
         
         return "\(minutesString):\(secondsString):\(millsecondsString)"
     }
@@ -58,11 +58,11 @@ struct ActivityRow: View {
     var body: some View {
         ZStack {
             HStack {
-                Image(systemName: "clock")
+                Image(systemName: "clock").padding(.trailing)
             VStack(alignment: .leading) {
                 Text(activity.name)
                 Text(count
-                ).font(.subheadline)
+                    ).font(.subheadline)
             
 
                 Spacer()

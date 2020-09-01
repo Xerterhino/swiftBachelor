@@ -14,25 +14,14 @@ import BackgroundTasks
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
-    func showNoti() {
-        
-        //get the notification center
+    func showNotification() {
         let center =  UNUserNotificationCenter.current()
-
-        //create the content for the notification
         let content = UNMutableNotificationContent()
         content.title = "Check your activities"
-        //content.subtitle = "Lunch"
         content.body = "Did you track anything today?"
         content.sound = UNNotificationSound.default
-
-        //notification trigger can be based on time, calendar or location
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
-
-        //create request to display
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 900, repeats: true)
         let request = UNNotificationRequest(identifier: "ContentIdentifier1", content: content, trigger: trigger)
-        
-        //add request to notification center
         center.add(request) { (error) in
             if error != nil {
                 print("error \(String(describing: error))")
@@ -43,43 +32,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func handleAppRefreshTask(task: BGAppRefreshTask) {
       task.expirationHandler = {
         task.setTaskCompleted(success: false)
-        print("expirationHandler called")
       }
-      self.showNoti();
-        task.setTaskCompleted(success: true)
-        print("handleAooRefreshTask")
-      
-      scheduleBackgroundPokemonFetch()
+      self.showNotification();
+      task.setTaskCompleted(success: true)
+      scheduleBackgroundFetch()
     }
     
-    func scheduleBackgroundPokemonFetch() {
-        let pokemonFetchTask = BGAppRefreshTaskRequest(identifier: "com.background.fetch")
-        pokemonFetchTask.earliestBeginDate = Date(timeIntervalSinceNow: 60)
+    func scheduleBackgroundFetch() {
+        let fetchTask = BGAppRefreshTaskRequest(identifier: "com.background.fetch")
+        fetchTask.earliestBeginDate = Date(timeIntervalSinceNow: 900)
         do {
-          try BGTaskScheduler.shared.submit(pokemonFetchTask)
+          try BGTaskScheduler.shared.submit(fetchTask)
             print("task scheduled")
         } catch {
           print("Unable to submit task: \(error.localizedDescription)")
         }
     }
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let center =  UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound, .badge]) { (result, error) in
-           //handle result of request failure
         }
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.background.fetch",
-                                        using: nil) { (task) in
-                                            print("GOT THAT BG TASKS FETCHED")
-                                            self.handleAppRefreshTask(task: task as! BGAppRefreshTask);
-                                            
+                                        using: nil) { (task) in                                            self.handleAppRefreshTask(task: task as! BGAppRefreshTask);
         }
-        
-        
-        
-        
-        // Override point for customization after application launch.
-        return true
+                return true
     }
 
     // MARK: UISceneSession Lifecycle

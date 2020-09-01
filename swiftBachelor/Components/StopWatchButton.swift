@@ -15,7 +15,7 @@ struct StopWatchButton : View {
     var isPaused: Bool
 
     var body: some View {
-        let buttonWidth = (UIScreen.main.bounds.size.width / 2) - 12
+        let buttonWidth = (UIScreen.main.bounds.size.width / 3) - 12
         
         return Button(action: {
                 if self.isPaused {

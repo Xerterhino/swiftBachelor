@@ -10,7 +10,7 @@ class NetworkManager: ObservableObject {
   }
     
     public func loadDataNormal() {
-        guard let url = URL(string: "http://192.168.178.20:8080/api/activity") else { return }
+        guard let url = URL(string: "http://192.168.178.44:8080/api/activity") else { return }
         URLSession.shared.dataTask(with: url){ (data, _, _) in
             guard let data = data else { return }
             let acts = try! JSONDecoder().decode(Array<Activity>.self, from: data)
@@ -21,7 +21,7 @@ class NetworkManager: ObservableObject {
     }
     
     public func createActivity(activityName: String) -> Activity?  {
-        guard let url = URL(string: "http://192.168.178.20:8080/api/activity") else {
+        guard let url = URL(string: "http://192.168.178.44:8080/api/activity") else {
             print("CRASHED CREATING")
             return Activity(_id: "error", name: "error", duration: "0")
         }
@@ -56,7 +56,7 @@ class NetworkManager: ObservableObject {
     }
     
     public func deleteActivity(activityID: String)  {
-        guard let url = URL(string: "http://192.168.178.20:8080/api/activity/\(activityID)") else {
+        guard let url = URL(string: "http://192.168.178.44:8080/api/activity/\(activityID)") else {
             print("CRASHED CREATING")
             return
         }
@@ -82,7 +82,7 @@ class NetworkManager: ObservableObject {
     }
     
     public func updateActivity(activityID: String, activityName: String, duration: String) {
-            guard let url = URL(string: "http://192.168.178.20:8080/api/activity/\(activityID)") else { return }
+            guard let url = URL(string: "http://192.168.178.44:8080/api/activity/\(activityID)") else { return }
             let body: [String: String] = ["name": activityName, "duration": duration, "finished": "false"]
 
             let finalBody = try! JSONSerialization.data(withJSONObject: body)
